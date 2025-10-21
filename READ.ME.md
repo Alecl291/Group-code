@@ -41,5 +41,5 @@ Built-in food database with nutritional information and recommended daily values
 Visual progress charts to compare calorie intake vs. burn.
 
 
-- Alec Lara, 
+- Alec Lara, Samuel Solis
 
