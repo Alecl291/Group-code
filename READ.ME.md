@@ -5,7 +5,7 @@ QuizieMe will allow users to create virutal flash cards that can be saved for st
 ## Team Members
 - **Alec Lara** (EUID: alec291)
 - **Lucky Onyedebelu** (EUID: lucky0)
-- **Samuel Solis** (EUID: samuel123) 
+- **Samuel Solis** (EUID: sas0905) 
 - **Hamza Shakur** (EUID: 0062) 
 
 ## Features Included
