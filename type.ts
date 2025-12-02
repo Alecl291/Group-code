@@ -13,7 +13,7 @@ export interface Deck {
 }
 
 export interface GenerationParams {
-  // kept for compatibility with other parts of your app
+  
   difficulty?: 'easy' | 'medium' | 'hard';
   count?: number;
 }
