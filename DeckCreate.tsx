@@ -41,7 +41,7 @@ export const DeckCreator: React.FC<DeckCreatorProps> = ({ onSave, onCancel }) =>
     }
 
     setSaving(true);
-    // create final deck with generated ids
+   
     const deck: Deck = {
       id: uuidv4(),
       title: title.trim(),
@@ -53,7 +53,7 @@ export const DeckCreator: React.FC<DeckCreatorProps> = ({ onSave, onCancel }) =>
       })),
     };
 
-    // mimic async save (but not required) — calling onSave immediately
+  
     onSave(deck);
     setSaving(false);
   };
