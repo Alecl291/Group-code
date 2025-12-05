@@ -20,7 +20,7 @@ export const CardFlip: React.FC<CardFlipProps> = ({ card, isFlipped, onFlip }) =
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.6, type: "spring", stiffness: 260, damping: 20 }}
       >
-        {/* Front */}
+       
         <div className="absolute inset-0 w-full h-full bg-white rounded-2xl p-8 flex flex-col items-center justify-center backface-hidden border border-gray-100">
             <span className="absolute top-4 left-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Question</span>
             <p className="text-2xl md:text-3xl font-medium text-center text-gray-800 leading-relaxed">
@@ -29,7 +29,7 @@ export const CardFlip: React.FC<CardFlipProps> = ({ card, isFlipped, onFlip }) =
             <div className="absolute bottom-4 text-gray-400 text-sm font-medium">Tap to flip</div>
         </div>
 
-        {/* Back */}
+   
         <div className="absolute inset-0 w-full h-full bg-blue-50 rounded-2xl p-8 flex flex-col items-center justify-center backface-hidden rotate-y-180 border border-blue-100">
             <span className="absolute top-4 left-4 text-xs font-bold text-blue-400 uppercase tracking-wider">Answer</span>
             <p className="text-2xl md:text-3xl font-medium text-center text-blue-900 leading-relaxed">
