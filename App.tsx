@@ -4,7 +4,7 @@ import { DeckCreator } from './DeckCreate';
 import { Deck, Card } from './types';
 import { FlashCard } from './FlashCard';
 
-export const App: React.FC = () => {
+  const App: React.FC = () => {
   const [decks, setDecks] = useState<Deck[]>([]);
   const [activeDeck, setActiveDeck] = useState<Deck | null>(null);
   const [flipIndex, setFlipIndex] = useState<number | null>(null);
@@ -82,4 +82,6 @@ export const App: React.FC = () => {
       )}
     </div>
   );
+
 };
+export default App;

@@ -1,0 +1,99 @@
+{
+  "projectName": "QuizzieMe",
+  "description": "A flashcard-based learning application where users can create decks, study cards, and explore community decks.",
+  "entryFile": "index.tsx",
+  "rootElementId": "root",
+  "techStack": {
+    "frontend": "React + TypeScript",
+    "bundler": "Vite or React Scripts",
+    "styling": "TailwindCSS / Inline styles",
+    "animation": "Framer Motion",
+    "icons": "Lucide React"
+  },
+  "types": {
+    "Card": {
+      "id": "string",
+      "front": "string",
+      "back": "string"
+    },
+    "Deck": {
+      "id": "string",
+      "title": "string",
+      "description": "string",
+      "createdAt": "number",
+      "isCommunity": "boolean (optional)",
+      "color": "string (optional)",
+      "icon": "string (optional)",
+      "cards": "Card[]"
+    },
+    "CreateDeckInput": {
+      "title": "string",
+      "description": "string",
+      "cards": "Omit<Card, 'id'>[]"
+    }
+  },
+  "components": [
+    {
+      "name": "App",
+      "file": "App.tsx",
+      "responsibility": "Main controller that manages deck creation, deck viewing, active selection, and study mode.",
+      "state": ["decks", "activeDeck", "flipIndex"],
+      "children": ["DeckCreator", "FlashCard"]
+    },
+    {
+      "name": "DeckCreator",
+      "file": "DeckCreate.tsx",
+      "responsibility": "Form for creating decks and adding cards.",
+      "inputs": ["CreateDeckInput"],
+      "outputs": ["New Deck added to global list"]
+    },
+    {
+      "name": "FlashCard",
+      "file": "FlashCard.tsx",
+      "responsibility": "Displays a single card with a flip animation between front/back.",
+      "props": ["card", "isFlipped", "onFlip"]
+    },
+    {
+      "name": "CardFlip",
+      "file": "CardFlip.tsx",
+      "responsibility": "Handles the animation logic for flipping cards.",
+      "uses": ["Framer Motion"]
+    },
+    {
+      "name": "Home",
+      "file": "Home.tsx",
+      "responsibility": "Landing page with UI for exploring the app."
+    },
+    {
+      "name": "Create",
+      "file": "Create.tsx",
+      "responsibility": "Page that wraps DeckCreator and handles deck creation UI."
+    },
+    {
+      "name": "Study",
+      "file": "study.tsx",
+      "responsibility": "Study mode for cycling through cards in a deck."
+    },
+    {
+      "name": "Community",
+      "file": "Community.tsx",
+      "responsibility": "Shows community decks and allows selecting one to study."
+    },
+    {
+      "name": "Layout",
+      "file": "Layout.tsx",
+      "responsibility": "Page frame (header/nav layout) shared across pages."
+    }
+  ],
+  "routes": [
+    { "path": "/", "component": "Home" },
+    { "path": "/create", "component": "Create" },
+    { "path": "/study", "component": "Study" },
+    { "path": "/community", "component": "Community" }
+  ],
+  "html": {
+    "file": "index.html",
+    "root": "root",
+    "includes": ["JS bundle", "CSS"]
+  }
+}

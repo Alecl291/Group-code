@@ -1,4 +1,4 @@
-export innterface Card {
+export interface Card {
   id: string;
   front: string;
   back: string;
@@ -15,8 +15,8 @@ export interface Deck {
   icon?: string;
 }
 
-export type CreateDeckInput {
+export type CreateDeckInput = {
   title: string;
   description: string;
-  cards: Omit<Card, 'id'>[];
-}
+  cards: Omit<Card, "id">[];
+};
