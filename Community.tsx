@@ -88,9 +88,30 @@ const COMMUNITY_DECKS: (CreateDeckInput & { id: string })[] = [
       { front: 'Lungs', back: 'Organs responsible for respiration.' },
       { front: 'Liver', back: 'Detoxifies chemicals and metabolizes drugs.' }
     ]
-  }
+  },
+{
+  id: 'comm_finance_1',
+  title: 'Finance Fundamentals',
+  description: 'Core financial concepts, terms, and principles.',
+  cards: [
+    { front: 'Asset', back: 'A resource with economic value that an individual or company owns expecting future benefit.' },
+    { front: 'Liability', back: 'A financial obligation or debt owed to another party.' },
+    { front: 'Equity', back: 'Ownership interest in an asset after liabilities are deducted.' },
+    { front: 'Revenue', back: 'Income generated from normal business operations.' },
+    { front: 'Expense', back: 'The cost incurred in the process of generating revenue.' },
+    { front: 'Net Income', back: 'Revenue minus expenses; a measure of profitability.' },
+    { front: 'Cash Flow', back: 'Movement of money in and out of a business or account.' },
+    { front: 'Liquidity', back: 'How quickly an asset can be converted to cash without losing value.' },
+    { front: 'ROI (Return on Investment)', back: 'A measure of profitability calculated as (Gain – Cost) / Cost.' },
+    { front: 'Diversification', back: 'Risk management strategy of spreading investments across various assets.' },
+    { front: 'Bond', back: 'A fixed-income investment where an investor loans money to a borrower for interest.' },
+    { front: 'Stock', back: 'A security representing partial ownership of a company.' },
+    { front: 'Mutual Fund', back: 'A pooled investment managed by professionals, investing in stocks, bonds, etc.' },
+    { front: 'ETF (Exchange-Traded Fund)', back: 'A fund traded like a stock, holding a basket of securities.' },
+    { front: 'Compound Interest', back: 'Interest calculated on both the initial principal and accumulated interest.' }
+  ]
+}
 ];
-
 export const Community: React.FC<CommunityProps> = ({ onImport }) => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
